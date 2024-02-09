@@ -19,6 +19,14 @@ function App() {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/Calander" element={<Calander />} />
+      <Route path="/Interview" element={<Interview />} />
+      <Route path="/Community" element={<Community />} />
+      <Route path="/Mypage" element={<Mypage />} />
+      <Route path="/Portfolio" element={<Portfolio />} />
+      <Route path="/PostDetail" element={<PostDetail />} />
+      <Route path="/PreLogin" element={<PreLogin />} />
+      <Route path="/Resume" element={<Resume />} />
     </Routes>
   );
 }

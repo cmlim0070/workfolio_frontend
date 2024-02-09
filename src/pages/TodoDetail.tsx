@@ -1,9 +1,9 @@
-import "../css/Calander.scss";
+import "../css/TodoDetail.scss";
 import Nav from '../component/Nav';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 
-function Calander() {
+function TodoDetail() {
     return (
         <div className="window">
         <Nav></Nav>
@@ -14,4 +14,4 @@ function Calander() {
     </div>
     );
 }
-export default Calander;
+export default TodoDetail;

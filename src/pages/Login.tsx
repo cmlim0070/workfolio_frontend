@@ -18,7 +18,7 @@ function Login() {
                 <h3 className="text-login">Login</h3>
                     {/* 링크 어디로 연결? */}
                     <form action="/login" method="POST" encType="multipart/form-data">
-                        <div className="wrapper">
+                        <div className="wrapper-login">
                             <a href="" className="button button--facebook">Login With Facebook</a>
                             <a href="" className="button button--google">Login With Google</a>
                         </div>      
