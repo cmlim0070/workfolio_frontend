@@ -1,22 +1,27 @@
 :root {
     --todo-color: #F5F5F5;
     --todo-border-color: #5030E5;
+    --calander-border-color: #8BC48A;
     --calander-color: #F5F5F5;
 }
 
 .window {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-}
-
-.window-right {
-    display: flex;
-    flex-direction: column;
     width: 100%;
 }
 
+.window-2 {
+    display: flex;
+    flex-direction: row;
+}
+
 .section-wrapper {
+    // position: relative;
+    width: 100vw;
+    // min-width: 1000px;
+    // top: 68px;
+    // left: 232px;
     background-color: rgb(255, 255, 255);
     height: 100%;
     overflow-y: scroll;
@@ -29,14 +34,57 @@
 
 .section-title {
     padding: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    .material-symbols-outlined{
+        font-size: 18px;
+        color: #5030E5;
+        margin: 10px;
+    }
+}
+
+.section-title-icon {
+    margin-left: 25px;
+    display: flex;
+
+    .section-title-icon-square{
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+        background-color: #ded9f6;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .section-todo {
     background-color: var(--todo-color);
     border-radius: 15px;
     width: 400px;
+    min-height: 200px;
     margin-right: 50px;
     margin-bottom: 50px;
+    overflow:auto;
+
+    .box-wrapper {
+        width: 360px;
+        height: auto;
+        margin: 20px 0 0 0;
+        padding-bottom: 10px;
+    
+    }
 
     .material-symbols-outlined {
         font-size: 14px;
@@ -54,48 +102,116 @@
     flex-direction: column;
     align-items: center;
 
+    .box-desc {
+        border-bottom: 3px solid var(--todo-border-color);
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
 }
 
-.todo-wrapper {
-    width:86%;
-    height: auto;
-    margin: 20px 0 20px 0;
-    padding-bottom: 20px;
-
-    border-bottom: 3px solid var(--todo-border-color);
-}
-
-.todo-desc {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.todo-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 10px;
-}
-
-.section-calander{
-    background-color: var(--calander-color);
+.section-calander {
+    background-color: var(--todo-color);
     border-radius: 15px;
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    min-height: 200px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+
+    .box-wrapper {
+        width: 660px;
+        height: auto;
+        margin: 20px 0 30px 0;
+        padding-bottom: 20px;
+    
+        border-bottom: 3px solid var(--calander-border-color);
+    }
 
     .material-symbols-outlined {
         font-size: 14px;
+        text-align: center;
+        margin-top: 3px;
+        color: var(--calander-border-color);
         font-variation-settings:
         'FILL' 100,
         'wght' 400,
         'GRAD' 0,
         'opsz' 24
     }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--calander-color);
+    border-radius: 15px;
+    width: 700px;
+    min-height: 200px;
+
 }
 
-.content {
+
+.box-desc {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.box-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+
+
+// 투두
+
+.todo-card {
+    background-color: #ffffff;
+    min-height: 100px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.todo-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 90%;
+}
+
+.todo-card-time-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fde7d3;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.todo-card-content-time{
+    display: inline-block;
+    color: #D58D49;
+    font-weight: 800;
+}
+
+.todo-card-content-title{
+    font-size: 23px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.todo-card-content-desc{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }

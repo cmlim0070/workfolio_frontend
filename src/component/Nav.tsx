@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Nav(){
     return (
-    <div>
+    
         <div className="nav-wrapper">
             <div className="side-bar">
             {/* 로고 부분
@@ -67,19 +67,29 @@ function Nav(){
                 </Link>
             </li>
         </ul>
-        <ul className="category-list">
-            <div className="resume-title">
-                <span className="material-symbols-outlined">description</span>
-                <div className="category-header">자기소개서</div>
-            </div>
-            {/* 카테고리 아이템 추후 DB에서 받아와서 보여주어야 함
-            그럼 컴포넌트로 작성....??????????
-            */}
-            <li className="category-item">
-            <span
-                className="category-item-status"
-            ></span><span className="category-item-text">My works</span>
-            <span className="tooltip">My works</span>
+        
+        <ul className="features-list">
+            <li className="features-item inbox active">
+                <Link to="/Portfolio">
+                <span className="status"></span>
+                <span className="material-symbols-outlined">Resume</span>
+                <span className="features-item-text">Portfolio</span>
+                <span className="tooltip">Portfolio</span>
+                </Link>
+            </li>
+            <li className="features-item draft">
+                <Link to="/Interview">
+                <span className="material-symbols-outlined">Resume</span>
+                <span className="features-item-text">Interview</span>
+                <span className="tooltip">Interview</span>
+                </Link>
+            </li>
+            <li className="features-item trash">
+                <Link to="/Resume">
+                <span className="material-symbols-outlined">Resume</span>
+                <span className="features-item-text">Resume</span>
+                <span className="tooltip">Resume</span>
+                </Link>
             </li>
         </ul>
 
@@ -117,7 +127,7 @@ function Nav(){
         </ul> */}
             </div>
         </div>
-    </div>
+    
     );
 }
 

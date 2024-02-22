@@ -13,6 +13,7 @@ import Portfolio from './pages/Portfolio';
 import PostDetail from './pages/PostDetail';
 import PreLogin from './pages/PreLogin';
 import Resume from './pages/Resume';
+import TodoDetail from './pages/TodoDetail';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path="/PostDetail" element={<PostDetail />} />
       <Route path="/PreLogin" element={<PreLogin />} />
       <Route path="/Resume" element={<Resume />} />
+      <Route path="/TodoDetail" element={<TodoDetail />} />
     </Routes>
   );
 }
